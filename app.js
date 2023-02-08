@@ -15,12 +15,11 @@ const fullName = getParameterByName("fullName");
 const token = getParameterByName("token");
 const cardNumber = getParameterByName("cardNumber");
 const expiration = getParameterByName("expiration");
-const cvc = getParameterByName("cvc");
-const uiKey = getParameterByName("uiKey");
+const cvc = getParameterByName("cvc")?.replace(" ", "+");
+const uiKey = getParameterByName("uiKey")?.replace(" ", "+");
 const provider = getParameterByName("provider");
 
 const bearerToken = `Bearer ${token}`;
-        
 
 const onSucces = function() {
     log("Loading success");
@@ -28,7 +27,7 @@ const onSucces = function() {
     number.mount(document.getElementById('cardNumber'));
 
     
-    var cvv = window.OpcUxSecureClient.span('cvv', cvc?.replace(" ", "+"));
+    var cvv = window.OpcUxSecureClient.span('cvv', cvc);
     cvv.mount(document.getElementById('cvv'));
 
     fullNameElement.innerHTML = `${fullName}`;
