@@ -1,4 +1,5 @@
 const log = console.log;
+log("Loading app.js");
 
 // Select elements
 const fullNameElement = document.querySelector('#fullName');
