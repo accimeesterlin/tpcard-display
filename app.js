@@ -10,8 +10,7 @@ const getParameterByName = (name) => {
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
-const firstName = getParameterByName("firstName");
-const lastName = getParameterByName("lastName");
+const fullName = getParameterByName("fullName");
 const token = getParameterByName("token");
 const cardNumber = getParameterByName("cardNumber");
 const expiration = getParameterByName("expiration");
@@ -31,7 +30,7 @@ const onSucces = function() {
     var cvv = window.OpcUxSecureClient.span('cvv', cvc?.replace(" ", "+"));
     cvv.mount(document.getElementById('cvv'));
 
-    fullNameElement.innerHTML = `${firstName} ${lastName}`;
+    fullNameElement.innerHTML = `${fullName}`;
     expirationElement.innerHTML = `${expiration}`;
 }
 
