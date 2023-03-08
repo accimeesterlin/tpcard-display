@@ -72,8 +72,11 @@ body {
 	inset: 0;
 }
 .card__logo,
-.card__number {
+.card__number, body .card__number #cardNumber {
 	width: 100%;
+	z-index: 5;
+	color: #FFF;
+	margin-left: 20px;
 }
 .card__logo {
 	font-weight: bold;

@@ -13,11 +13,15 @@ const getParameterByName = (name) => {
 
 const fullName = getParameterByName("fullName");
 const token = getParameterByName("token");
-const cardNumber = getParameterByName("cardNumber");
+const cardNumber = getParameterByName("cardNumber").replace(" ", "+");
 const expiration = getParameterByName("expiration");
 const cvc = getParameterByName("cvc")?.replace(" ", "+");
 const uiKey = getParameterByName("uiKey")?.replace(" ", "+");
 const provider = getParameterByName("provider");
+
+console.log("Card Number: ", cardNumber);
+
+console.log("UI Key: " + uiKey);
 
 const bearerToken = `Bearer ${token}`;
 
