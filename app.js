@@ -15,7 +15,9 @@ const getParameterByName = (name) => {
 
 const fullName = getParameterByName("fullName");
 const token = getParameterByName("token");
-const cardNumber = getParameterByName("cardNumber")?.replace(" ", "+");
+const cardNumber = getParameterByName("cardNumber")?.replace(" ", "+")?.replace(" ", "+");
+
+console.log("Card Number: ", cardNumber);
 const expiration = getParameterByName("expiration");
 const cvc = getParameterByName("cvc")?.replace(" ", "+");
 const uiKey = getParameterByName("uiKey")?.replace(" ", "+");
