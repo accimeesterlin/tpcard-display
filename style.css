@@ -50,7 +50,6 @@ body {
 	height: 6.8em;
 	transform: translate3d(0,0,0);
 }
-.card__info,
 .card__chip-texture,
 .card__texture {
 	position: absolute;
@@ -68,15 +67,20 @@ body {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 100%;
 	padding: 0.75rem;
-	inset: 0;
+	/* inset: 0; */
 }
+.card__logo {
+	display: flex;
+	justify-content: space-between;
+}
+
 .card__logo,
 .card__number, body .card__number #cardNumber {
 	width: 100%;
 	z-index: 5;
 	color: #FFF;
-	margin-left: 20px;
 }
 .card__logo {
 	font-weight: bold;
@@ -114,6 +118,7 @@ body {
 .card__number {
 	font-size: 0.8rem;
 	display: flex;
+	margin-top: 10px;
 	justify-content: space-between;
 }
 .card__valid-thru,
@@ -189,10 +194,19 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 5px;;
 }
 
 .opc-uxsec-span {
 	color: #FFF;
+}
+
+.fa-lock-open, .fa-lock {
+	cursor: pointer;
+}
+
+.card__icon i {
+	font-size: 25px;
 }
 
 
